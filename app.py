@@ -851,14 +851,12 @@ ar["risk_category"] = pd.cut(
 customers.to_csv("Customers_Big.csv", index=False)
 ar.to_csv("AR_Big.csv", index=False)
 
-!ls
 
 from google.colab import files
 
 files.download("AR_Big.csv")
 files.download("Customers_Big.csv")
 
-!pip install streamlit pyngrok
 
 import os
 
@@ -902,7 +900,3 @@ st.bar_chart(ar.groupby("channel")["invoice_amount"].sum())
 # Data Preview
 st.subheader("Accounts Receivable Data")
 st.dataframe(ar.head(100))
-
-streamlit
-pandas
-numpy
