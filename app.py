@@ -87,7 +87,6 @@ payments.to_csv('payments.csv', index=False)
 inventory.to_csv('inventory.csv', index=False)
 po.to_csv('purchase_orders.csv', index=False)
 
-uploaded = files.upload()
 
 import os
 
